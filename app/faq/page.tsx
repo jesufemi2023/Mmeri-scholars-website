@@ -17,74 +17,96 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     id: "1",
-    question: "What does *MMERI* mean?",
-    answer: "Is MMERI only for immigrant or disaara families?",
+    question: "What does \"MMERI\" mean?",
+    answer:
+      "MMERI is derived from the Igbo language and means victorious or triumphant. MMERI Scholars exists to help families turn their educational journeys into lasting victories through intentional planning and informed decision-making.",
     category: "expanded",
     expandedByDefault: true,
   },
   {
     id: "2",
-    question: "Why there benefits ah one-time plans and year-long advising?",
+    question: "Is MMERI only for immigrant or diaspora families?",
     answer:
-      "One-time plans are designed for families who need guidance on specific aspects of the college application process, while year-long advising provides comprehensive support throughout the entire journey. Year-long advising includes regular check-ins, essay reviews, application strategy, and ongoing support through decision season.",
+      "No. MMERI serves families who value early planning, accountability, and informed decision-making. Our work is deeply informed by the experiences of immigrant, diaspora, and first-generation families, as these communities often navigate the college system without clear guidance. That perspective shapes how we advise but it does not limit who we serve.",
     category: "expanded",
     expandedByDefault: true,
   },
   {
     id: "3",
-    question: "Why do you offer both one-time plan over Blaar-long blueprint plans?",
+    question: "Why do you offer both one-time plans and year-long advising?",
     answer:
-      "We offer both options to accommodate different family needs and budgets. Some families need targeted support for specific aspects, while others benefit from continuous guidance over a longer period. This flexibility ensures we can serve families at various stages of their college planning journey.",
+      "Families come to MMERI at different stages of readiness. Some want ongoing accountability and hands-on support. Others need clarity first before committing long-term. Offering both options allows families to start where they are without pressure. One-time plans provide clarity at a specific moment. Year-long advising provides ongoing guidance as decisions unfold.",
     category: "expanded",
     expandedByDefault: true,
   },
   {
     id: "4",
-    question: "Can we upgrade from a one-time plan to yearry advising advising later?",
+    question: "Are there benefits to year-long advising over Blueprint plans?",
     answer:
-      "Yes, absolutely. We understand that families' needs may evolve. You can upgrade from a one-time plan to year-long advising at any time. Please contact us to discuss the upgrade options and pricing.",
+      "Yes. The difference is accountability and execution. Blueprint plans outline what needs to happen, but families are responsible for carrying it out independently. With year-long advising, we stay involved as decisions unfold, track progress, adjust strategy when circumstances change, and help families avoid common missteps before they become costly. In short: Blueprint plans provide direction. Year-long advising provides guidance, accountability, and course correction over time.",
     category: "collapsed",
   },
   {
     id: "5",
-    question: "How we upgrade from a one service require free from our one service year?",
+    question: "Can we upgrade from a one-time plan to year-long advising later?",
     answer:
-      "To upgrade your service, simply reach out to our team with your request. We'll review your current plan and provide options for upgrading to a package that better suits your needs. We'll ensure a smooth transition without losing any progress.",
+      "Yes. Many families begin with a one-time plan and later choose year-long advising once they better understand the complexity of execution. If you decide to continue working with us, we'll recommend the most appropriate next step based on your student's stage and needs. Availability for year-long advising is limited and not guaranteed.",
     category: "collapsed",
   },
   {
     id: "6",
-    question: "How you start time each service your multiple childrren?",
+    question: "Can we start the process late (senior year), or do we have to start early?",
     answer:
-      "For families with multiple children, we offer flexible options. You can start our service for each child at different times based on their grade level and college timeline. We can also provide package deals for families with multiple children to make our services more accessible.",
+      "Starting early provides the greatest flexibility, lower stress, and stronger financial outcomes. Our highest scholarship totals and smoothest application seasons come from families who begin in 9th or 10th grade. That said, we do offer an Accelerated Victory track for seniors. Space for late-start seniors is limited to ensure we can provide the high-touch, 1:1 support required to catch up strategically.",
     category: "collapsed",
   },
   {
     id: "7",
-    question: "Do you offer segment plans for matisons or multiple children?",
+    question: "How much time does each service require from our family?",
     answer:
-      "Yes, we offer customized payment plans and packages for families with multiple children or those looking for segmented services. Our goal is to make our advising accessible to all families. Contact us to discuss options tailored to your family's needs.",
+      "The time commitment depends on the level of support you choose. One-time plans require upfront information gathering and independent execution. Year-long advising involves regular check-ins, preparation between meetings, and ongoing engagement. Families who stay engaged tend to see the strongest outcomes.",
     category: "collapsed",
   },
   {
     id: "8",
-    question: "Do you guarantee charge for familiesdes or scholarships or scholarships?",
+    question: "Do you offer support for families with multiple children?",
     answer:
-      "While we don't guarantee scholarships, we provide comprehensive guidance on identifying scholarship opportunities, strengthening applications, and positioning students for success. Our strategies have helped many families secure significant financial aid.",
+      "Yes. We believe in building a family legacy. Many families enroll younger siblings in our ROOTED or BLOOM programs while an older student is in VICTORY. We offer a Sibling Legacy Discount for families who commit to the MMERI path for more than one scholar.",
     category: "collapsed",
   },
   {
     id: "9",
-    question: "Do you review essays, transcripts, or applications during workshops?",
+    question: "Do you offer payment plans for year-long advising?",
     answer:
-      "Yes, depending on your service plan, we offer essay reviews, transcript analysis, and application reviews. Our year-long advising typically includes multiple rounds of essay feedback and application strategy sessions.",
+      "Yes. Payment plans are available for year-long advising and are discussed after we've confirmed the service is a good fit. One-time plans and Blueprint services are paid in full at booking.",
     category: "collapsed",
   },
   {
     id: "10",
-    question: "How quickly can we start after submitting your intake form?",
+    question: "Do you guarantee college admissions or scholarships?",
     answer:
-      "We typically get back to families within 5-7 business days of submitting the intake form. If you need expedited support, please indicate this in your submission, and we'll do our best to accommodate your timeline.",
+      "No. Ethical advising does not guarantee outcomes. What we provide is clear strategy, early planning, and culturally informed decision-making designed to reduce risk and increase opportunity. Final outcomes depend on student effort, institutional policies, and external factors.",
+    category: "collapsed",
+  },
+  {
+    id: "11",
+    question: "Do you review essays, transcripts, or applications during workshops?",
+    answer:
+      "No. Workshops are educational and designed for groups. They do not include individualized advising, document review, or recommendations for specific students. Families seeking personalized guidance should explore our advising and strategy services.",
+    category: "collapsed",
+  },
+  {
+    id: "12",
+    question: "Do you work with students outside your local area?",
+    answer:
+      "Yes. All advising services are offered virtually, allowing us to support families regardless of location.",
+    category: "collapsed",
+  },
+  {
+    id: "13",
+    question: "How quickly can we start after submitting the intake form?",
+    answer:
+      "We review intake forms within 2–3 business days. If your situation is time-sensitive, please note deadlines clearly in your submission.",
     category: "collapsed",
   },
 ]
