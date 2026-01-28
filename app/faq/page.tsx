@@ -167,9 +167,7 @@ export default function FAQPage() {
               We'll help you identify the right next step based your student's stage and needs
             </p>
             <a
-              href="https://calendly.com/mmerischolars/scholars-free-consultation"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/connect"
               className="inline-block font-sans font-bold text-white bg-mmeri-maroon hover:bg-mmeri-maroon/90 px-8 py-3 rounded-md transition-colors mb-4"
             >
               Schedule a Free Consultation
