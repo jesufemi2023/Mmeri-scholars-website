@@ -166,9 +166,14 @@ export default function FAQPage() {
             <p className="font-serif text-sm md:text-base mb-6 text-white/90">
               We'll help you identify the right next step based your student's stage and needs
             </p>
-            <button className="inline-block font-sans font-bold text-mmeri-navy bg-mmeri-gold hover:bg-mmeri-gold/90 px-8 py-3 rounded-md transition-colors mb-4">
+            <a
+              href="https://calendly.com/mmerischolars/scholars-free-consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-sans font-bold text-mmeri-navy bg-mmeri-gold hover:bg-mmeri-gold/90 px-8 py-3 rounded-md transition-colors mb-4"
+            >
               Schedule a Free Consultation
-            </button>
+            </a>
           </div>
         </div>
       </main>
