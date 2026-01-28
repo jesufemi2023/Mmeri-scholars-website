@@ -1,9 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ChevronDown, ChevronUp } from "lucide-react"
+import { ChevronDown } from "lucide-react"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 interface FAQItem {
   id: string
@@ -89,12 +90,24 @@ const faqData: FAQItem[] = [
 ]
 
 export default function FAQPage() {
-  const [expandedItems, setExpandedItems] = useState<string[]>(
-    faqData.filter((item) => item.expandedByDefault).map((item) => item.id)
-  )
+  const isMobile = useIsMobile()
+  const [expandedItems, setExpandedItems] = useState<string[]>([])
+
+  // Initialize with first 3 items expanded
+  useEffect(() => {
+    setExpandedItems(["1", "2", "3"])
+  }, [])
 
   const toggleItem = (id: string) => {
-    setExpandedItems((prev) => (prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]))
+    setExpandedItems((prev) => {
+      if (isMobile) {
+        // Mobile: only one open at a time
+        return prev.includes(id) ? [] : [id]
+      } else {
+        // Desktop: multiple can be open
+        return prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+      }
+    })
   }
 
   const expandedItems_Data = faqData.filter((item) => item.category === "expanded")
@@ -104,7 +117,7 @@ export default function FAQPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 pt-16 md:pt-20 pb-8 md:pb-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 max-w-3xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 max-w-4xl">
           {/* Title */}
           <div className="text-center mb-12">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-mmeri-navy mb-2">
@@ -112,21 +125,22 @@ export default function FAQPage() {
             </h1>
           </div>
 
-          {/* FAQ Container with border */}
-          <div className="border-2 border-mmeri-navy/30 p-6 md:p-8 bg-mmeri-cream/50">
+          {/* FAQ Container */}
+          <div className="border-2 border-mmeri-navy/40 p-0 bg-mmeri-cream shadow-sm">
             {/* Expanded by Default Section */}
             {expandedItems_Data.length > 0 && (
-              <div className="mb-8">
-                <div className="text-xs font-sans font-bold text-mmeri-navy/60 uppercase tracking-widest mb-4">
+              <div className="border-b border-mmeri-navy/20">
+                <div className="text-xs font-sans font-bold text-mmeri-navy/70 uppercase tracking-widest px-6 md:px-8 pt-6 pb-4">
                   Expanded by Default
                 </div>
-                <div className="space-y-3 mb-8 border-b border-mmeri-navy/20 pb-8">
-                  {expandedItems_Data.map((item) => (
+                <div className="space-y-0 px-6 md:px-8 pb-6">
+                  {expandedItems_Data.map((item, idx) => (
                     <FAQAccordionItem
                       key={item.id}
                       item={item}
                       isExpanded={expandedItems.includes(item.id)}
                       onToggle={() => toggleItem(item.id)}
+                      isLast={idx === expandedItems_Data.length - 1 && collapsedItems_Data.length === 0}
                     />
                   ))}
                 </div>
@@ -136,16 +150,17 @@ export default function FAQPage() {
             {/* Collapsed Section */}
             {collapsedItems_Data.length > 0 && (
               <div>
-                <div className="text-xs font-sans font-bold text-mmeri-navy/60 uppercase tracking-widest mb-4">
+                <div className="text-xs font-sans font-bold text-mmeri-navy/70 uppercase tracking-widest px-6 md:px-8 pt-6 pb-4">
                   Collapsed
                 </div>
-                <div className="space-y-3">
-                  {collapsedItems_Data.map((item) => (
+                <div className="space-y-0 px-6 md:px-8 pb-6">
+                  {collapsedItems_Data.map((item, idx) => (
                     <FAQAccordionItem
                       key={item.id}
                       item={item}
                       isExpanded={expandedItems.includes(item.id)}
                       onToggle={() => toggleItem(item.id)}
+                      isLast={idx === collapsedItems_Data.length - 1}
                     />
                   ))}
                 </div>
@@ -180,41 +195,45 @@ interface FAQAccordionItemProps {
   item: FAQItem
   isExpanded: boolean
   onToggle: () => void
+  isLast: boolean
 }
 
-function FAQAccordionItem({ item, isExpanded, onToggle }: FAQAccordionItemProps) {
+function FAQAccordionItem({ item, isExpanded, onToggle, isLast }: FAQAccordionItemProps) {
   return (
-    <div className="border border-mmeri-navy/20 bg-white hover:bg-mmeri-cream/30 transition-colors">
+    <div className={`border-b ${isLast ? "border-b-transparent" : "border-mmeri-navy/15"}`}>
       <button
         onClick={onToggle}
-        className="w-full flex items-start gap-4 p-4 text-left hover:bg-mmeri-cream/50 transition-colors"
+        className="w-full flex items-center gap-4 py-4 text-left hover:bg-white/40 transition-colors duration-200"
       >
-        {/* Icon */}
-        <div className="flex-shrink-0 mt-1">
-          <div className="w-6 h-6 bg-mmeri-maroon"></div>
+        {/* Crimson sash - only visible when expanded */}
+        <div
+          className={`flex-shrink-0 w-1 h-8 bg-mmeri-maroon rounded-full transition-opacity duration-200 ${
+            isExpanded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
+        {/* Maroon square icon */}
+        <div className="flex-shrink-0 mt-0">
+          <div className="w-5 h-5 bg-mmeri-maroon flex-shrink-0" />
         </div>
 
-        {/* Question and Toggle */}
+        {/* Question */}
         <div className="flex-1 min-w-0">
-          <p className="font-sans font-bold text-mmeri-navy text-sm md:text-base leading-tight">{item.question}</p>
+          <p className="font-serif font-bold text-mmeri-navy text-sm md:text-base leading-snug">{item.question}</p>
         </div>
 
         {/* Expand/Collapse Icon */}
-        <div className="flex-shrink-0 mt-0.5">
-          <div className="w-8 h-8 border-2 border-mmeri-navy/40 rounded-full flex items-center justify-center hover:border-mmeri-navy/60 transition-colors">
-            {isExpanded ? (
-              <ChevronUp className="w-4 h-4 text-mmeri-navy" />
-            ) : (
-              <ChevronDown className="w-4 h-4 text-mmeri-navy" />
-            )}
+        <div className="flex-shrink-0 ml-2">
+          <div className={`transform transition-transform duration-200 ${isExpanded ? "rotate-180" : "rotate-0"}`}>
+            <ChevronDown className="w-5 h-5 text-mmeri-navy/70" />
           </div>
         </div>
       </button>
 
       {/* Answer */}
       {isExpanded && (
-        <div className="px-4 pb-4 pt-0 border-t border-mmeri-navy/10 bg-white">
-          <div className="ml-10">
+        <div className="pb-4 bg-white/50">
+          <div className="ml-14">
             <p className="font-serif text-mmeri-navy/80 text-sm md:text-base leading-relaxed">{item.answer}</p>
           </div>
         </div>
