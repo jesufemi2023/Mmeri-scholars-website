@@ -132,9 +132,6 @@ export default function FAQPage() {
     })
   }
 
-  const expandedItems_Data = faqData.filter((item) => item.category === "expanded")
-  const collapsedItems_Data = faqData.filter((item) => item.category === "collapsed")
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -149,45 +146,18 @@ export default function FAQPage() {
 
           {/* FAQ Container */}
           <div className="border-2 border-mmeri-navy/40 p-0 bg-mmeri-cream shadow-sm">
-            {/* Expanded by Default Section */}
-            {expandedItems_Data.length > 0 && (
-              <div className="border-b border-mmeri-navy/20">
-                <div className="text-xs font-sans font-bold text-mmeri-navy/70 uppercase tracking-widest px-6 md:px-8 pt-6 pb-4">
-                  Expanded by Default
-                </div>
-                <div className="space-y-0 px-6 md:px-8 pb-6">
-                  {expandedItems_Data.map((item, idx) => (
-                    <FAQAccordionItem
-                      key={item.id}
-                      item={item}
-                      isExpanded={expandedItems.includes(item.id)}
-                      onToggle={() => toggleItem(item.id)}
-                      isLast={idx === expandedItems_Data.length - 1 && collapsedItems_Data.length === 0}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Collapsed Section */}
-            {collapsedItems_Data.length > 0 && (
-              <div>
-                <div className="text-xs font-sans font-bold text-mmeri-navy/70 uppercase tracking-widest px-6 md:px-8 pt-6 pb-4">
-                  Collapsed
-                </div>
-                <div className="space-y-0 px-6 md:px-8 pb-6">
-                  {collapsedItems_Data.map((item, idx) => (
-                    <FAQAccordionItem
-                      key={item.id}
-                      item={item}
-                      isExpanded={expandedItems.includes(item.id)}
-                      onToggle={() => toggleItem(item.id)}
-                      isLast={idx === collapsedItems_Data.length - 1}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
+            {/* All FAQ Items */}
+            <div className="space-y-0 px-6 md:px-8 py-6">
+              {faqData.map((item, idx) => (
+                <FAQAccordionItem
+                  key={item.id}
+                  item={item}
+                  isExpanded={expandedItems.includes(item.id)}
+                  onToggle={() => toggleItem(item.id)}
+                  isLast={idx === faqData.length - 1}
+                />
+              ))}
+            </div>
           </div>
 
           {/* CTA Section */}
@@ -196,15 +166,9 @@ export default function FAQPage() {
             <p className="font-serif text-sm md:text-base mb-6 text-white/90">
               We'll help you identify the right next step based your student's stage and needs
             </p>
-            <a
-              href="https://calendly.com/mmerischolars/scholars-free-consultation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block font-sans font-bold text-mmeri-navy bg-mmeri-gold hover:bg-mmeri-gold/90 px-8 py-3 rounded-md transition-colors mb-4"
-            >
+            <button className="inline-block font-sans font-bold text-mmeri-navy bg-mmeri-gold hover:bg-mmeri-gold/90 px-8 py-3 rounded-md transition-colors mb-4">
               Schedule a Free Consultation
-            </a>
-            <p className="font-serif text-xs text-white/75">https://calendly.com/mmerischolars/scholars-free-consultation</p>
+            </button>
           </div>
         </div>
       </main>
