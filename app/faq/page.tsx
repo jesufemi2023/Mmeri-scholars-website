@@ -170,7 +170,7 @@ export default function FAQPage() {
               href="https://calendly.com/mmerischolars/scholars-free-consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-sans font-bold text-mmeri-navy bg-mmeri-gold hover:bg-mmeri-gold/90 px-8 py-3 rounded-md transition-colors mb-4"
+              className="inline-block font-sans font-bold text-white bg-mmeri-maroon hover:bg-mmeri-maroon/90 px-8 py-3 rounded-md transition-colors mb-4"
             >
               Schedule a Free Consultation
             </a>
