@@ -134,13 +134,6 @@ export function Header() {
             >
               FAQ
             </Link>
-            <Link
-              href="/#connect"
-              onClick={(e) => handleNavClick(e, "/#connect")}
-              className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold text-[15px] whitespace-nowrap"
-            >
-              Connect
-            </Link>
           </nav>
 
           <div className="hidden lg:flex items-center">
@@ -210,13 +203,6 @@ export function Header() {
               className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold py-2.5 px-3 rounded-lg hover:bg-mmeri-navy/5"
             >
               FAQ
-            </Link>
-            <Link
-              href="/#connect"
-              onClick={(e) => handleNavClick(e, "/#connect")}
-              className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold py-2.5 px-3 rounded-lg hover:bg-mmeri-navy/5"
-            >
-              Connect
             </Link>
             <a
               href={WAITLIST_URL}
