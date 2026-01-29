@@ -109,26 +109,18 @@ export default function ConnectPage() {
           </div>
 
           {/* Newsletter Section */}
-          <div className="bg-mmeri-navy text-white p-8 md:p-10 text-center">
-            <h2 className="font-sans font-bold text-base mb-6 uppercase tracking-widest">
+          <div className="bg-mmeri-navy text-white p-8 md:p-10">
+            <h2 className="font-serif font-bold text-2xl md:text-3xl mb-8 text-center">
               Stay informed about our work
             </h2>
             {/* ConvertKit Embed Form */}
             <div
               dangerouslySetInnerHTML={{
                 __html: `
-                  <form id="ck_form_8978292" class="ck-form" action="https://app.kit.com/forms/8978292/subscriptions" data-remote="true" method="post" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1); background-color: #1a2e4c; border-radius: 0px; padding: 20px 0;">
-                    <div class="ck-form-content" style="color: #fff; max-width: 100%; margin: 0 auto;">
-                      <div style="text-align: center; margin-bottom: 15px;">
-                        <input class="ck-input" name="first_name" placeholder="First Name" type="text" style="width: 90%; max-width: 300px; padding: 8px 12px; margin-bottom: 10px; border: none; border-radius: 4px; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 14px;" />
-                      </div>
-                      <div style="text-align: center; margin-bottom: 15px;">
-                        <input class="ck-input" name="email_address" placeholder="Email Address" type="email" required style="width: 90%; max-width: 300px; padding: 8px 12px; margin-bottom: 10px; border: none; border-radius: 4px; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 14px;" />
-                      </div>
-                      <button class="ck-button ck-button-primary" type="submit" style="color: #1a2e4c; background-color: #d4a84b; border-radius: 4px; padding: 10px 20px; font-weight: bold; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 14px; border: none; cursor: pointer;">Subscribe</button>
-                    </div>
-                    <div class="ck-guaranty" style="font-size: 12px; text-align: center; color: rgba(255,255,255,0.7); margin-top: 15px;">
-                      Thanks for subscribing. Please check your email to confirm your subscription. Once confirmed, you'll receive MMERI updates and key college planning guidance.
+                  <form id="ck_form_8978292" class="ck-form" action="https://app.kit.com/forms/8978292/subscriptions" data-remote="true" method="post" style="background-color: transparent; border: none; padding: 0; box-shadow: none;">
+                    <div class="ck-form-content" style="color: #fff; max-width: 100%; margin: 0 auto; display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                      <input class="ck-input" name="email_address" placeholder="Email" type="email" required style="flex: 1; min-width: 250px; max-width: 400px; padding: 12px 16px; border: none; border-radius: 4px; font-family: Georgia, serif; font-size: 16px; background-color: #faf9f6; color: #1a2e4c;" />
+                      <button class="ck-button ck-button-primary" type="submit" style="padding: 12px 32px; background-color: #6b8e7f; color: white; border: none; border-radius: 4px; font-weight: bold; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 16px; cursor: pointer; min-width: 120px;">Subscribe</button>
                     </div>
                   </form>
                   <script>
@@ -137,8 +129,8 @@ export default function ConnectPage() {
                 `,
               }}
             />
-            <p className="font-serif text-xs text-white/80 mt-4">
-              Your information is confidential and protected by us. Consulting with you with MMERI Scholars
+            <p className="font-serif text-sm text-white/90 mt-6 text-center">
+              Your information is confidential and used solely for connecting you with MMERI Scholars
             </p>
           </div>
         </div>
