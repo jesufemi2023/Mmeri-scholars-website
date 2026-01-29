@@ -122,6 +122,12 @@ export function Header() {
               Community Partners
             </Link>
             <Link
+              href="/scholars"
+              className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold text-[15px] whitespace-nowrap"
+            >
+              Scholars
+            </Link>
+            <Link
               href="/faq"
               className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold text-[15px] whitespace-nowrap"
             >
@@ -188,6 +194,13 @@ export function Header() {
               className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold py-2.5 px-3 rounded-lg hover:bg-mmeri-navy/5"
             >
               Community Partners
+            </Link>
+            <Link
+              href="/scholars"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold py-2.5 px-3 rounded-lg hover:bg-mmeri-navy/5"
+            >
+              Scholars
             </Link>
             <Link
               href="/faq"

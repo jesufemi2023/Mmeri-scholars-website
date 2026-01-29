@@ -1,0 +1,75 @@
+{
+  "colleges": [
+    {
+      "id": "harvard",
+      "name": "Harvard University",
+      "logo": "/college-logos/harvard.png",
+      "category": ["selective", "ivies"]
+    },
+    {
+      "id": "princeton",
+      "name": "Princeton University",
+      "logo": "/college-logos/princeton.png",
+      "category": ["selective", "ivies"]
+    },
+    {
+      "id": "marquette",
+      "name": "Marquette University",
+      "logo": "/college-logos/marquette.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "notre-dame",
+      "name": "University of Notre Dame",
+      "logo": "/college-logos/notre-dame.png",
+      "category": ["selective", "ivies"]
+    },
+    {
+      "id": "cornell",
+      "name": "Cornell University",
+      "logo": "/college-logos/cornell.png",
+      "category": ["selective", "ivies"]
+    },
+    {
+      "id": "mit",
+      "name": "Massachusetts Institute of Technology",
+      "logo": "/college-logos/mit.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "uc-berkeley",
+      "name": "University of California, Berkeley",
+      "logo": "/college-logos/uc-berkeley.png",
+      "category": ["flagship", "stem"]
+    },
+    {
+      "id": "yale",
+      "name": "Yale University",
+      "logo": "/college-logos/yale.png",
+      "category": ["selective", "ivies"]
+    }
+  ],
+  "scholarStories": [
+    {
+      "id": 1,
+      "name": "Ayesha",
+      "school": "Yale University",
+      "image": "/scholar-profiles/ayesha.jpg",
+      "description": "MMERI helped me follow in my older sister's footsteps."
+    },
+    {
+      "id": 2,
+      "name": "MMERI Parent",
+      "school": "Multiple Acceptances",
+      "image": "/scholar-profiles/parent.jpg",
+      "description": "The guidance we received made all the difference in our college search process."
+    },
+    {
+      "id": 3,
+      "name": "Darion",
+      "school": "MIT",
+      "image": "/scholar-profiles/darion.jpg",
+      "description": "MMERI helped me see the full range of options available to me."
+    }
+  ]
+}
