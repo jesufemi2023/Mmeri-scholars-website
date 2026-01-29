@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { MoreScholarJourneys } from "@/components/more-scholar-journeys"
 import Image from "next/image"
 
 interface College {
@@ -20,9 +21,21 @@ interface ScholarStory {
   description: string
 }
 
+interface Testimonial {
+  id: string
+  name: string
+  role: string
+  schoolLine: string
+  quoteShort: string
+  quoteFull: string
+  tags: string[]
+  image: string
+}
+
 export default function ScholarsPage() {
   const [colleges, setColleges] = useState<College[]>([])
   const [scholarStories, setScholarStories] = useState<ScholarStory[]>([])
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([])
   const [selectedFilter, setSelectedFilter] = useState("all")
   const [filteredColleges, setFilteredColleges] = useState<College[]>([])
 
@@ -36,6 +49,14 @@ export default function ScholarsPage() {
         setFilteredColleges(data.colleges)
       })
       .catch((error) => console.error("Error loading acceptances data:", error))
+
+    // Load testimonials data
+    fetch("/testimonials.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setTestimonials(data.testimonials)
+      })
+      .catch((error) => console.error("Error loading testimonials data:", error))
   }, [])
 
   useEffect(() => {
@@ -193,6 +214,9 @@ export default function ScholarsPage() {
             </div>
           </div>
         </div>
+
+        {/* More Scholar Journeys Section */}
+        <MoreScholarJourneys testimonials={testimonials} />
       </main>
       <Footer />
     </div>
