@@ -113,6 +113,42 @@
       "name": "University of Michigan",
       "logo": "/college-logos/michigan.png",
       "category": ["selective", "flagship", "stem"]
+    },
+    {
+      "id": "wellesley",
+      "name": "Wellesley College",
+      "logo": "/college-logos/wellesley.png",
+      "category": ["selective", "liberal-arts"]
+    },
+    {
+      "id": "wake-forest",
+      "name": "Wake Forest University",
+      "logo": "/college-logos/wake-forest.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "richmond",
+      "name": "University of Richmond",
+      "logo": "/college-logos/richmond.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "colorado-college",
+      "name": "Colorado College",
+      "logo": "/college-logos/colorado-college.png",
+      "category": ["selective", "liberal-arts"]
+    },
+    {
+      "id": "vanderbilt",
+      "name": "Vanderbilt University",
+      "logo": "/college-logos/vanderbilt.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "wesleyan",
+      "name": "Wesleyan University",
+      "logo": "/college-logos/wesleyan.png",
+      "category": ["selective", "liberal-arts"]
     }
   ],
   "scholarStories": [
