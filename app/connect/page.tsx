@@ -59,9 +59,12 @@ export default function ConnectPage() {
 
           {/* Ask a Quick Question Form */}
           <div className="mb-12">
-            <h2 className="font-sans font-bold text-mmeri-navy text-base mb-6 uppercase tracking-widest">
-              Ask a Quick Question
+            <h2 className="font-serif text-lg md:text-xl font-bold text-mmeri-navy mb-6">
+              Get MMERI updates and key college planning deadlines & Resources
             </h2>
+            <h3 className="font-sans font-bold text-mmeri-navy text-base mb-6 uppercase tracking-widest">
+              Ask a Quick Question
+            </h3>
             <form
               action="https://formspree.io/f/mvzzgreg"
               method="POST"
@@ -131,6 +134,9 @@ export default function ConnectPage() {
             />
             <p className="font-serif text-sm text-white/90 mt-6 text-center">
               Your information is confidential and used solely for connecting you with MMERI Scholars
+            </p>
+            <p className="font-serif text-sm text-white/90 mt-2 text-center">
+              Phone: <a href="tel:346-456-4980" className="hover:text-white transition-colors">346 456 4980</a>
             </p>
           </div>
         </div>
