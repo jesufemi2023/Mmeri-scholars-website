@@ -81,7 +81,7 @@ export default function ScholarsPage() {
 
           {/* Filter Buttons */}
           <div
-            className="flex flex-wrap justify-center gap-2 mb-12 p-4 rounded-lg"
+            className="flex flex-wrap justify-center gap-2 mb-12 p-6 rounded-lg"
             style={{ backgroundColor: "#F6EFDF" }}
           >
             {filters.map((filter) => (
@@ -91,9 +91,9 @@ export default function ScholarsPage() {
                 className="font-serif font-semibold px-5 py-2 rounded-full transition-all"
                 style={{
                   backgroundColor:
-                    selectedFilter === filter.value ? "#092B43" : "transparent",
+                    selectedFilter === filter.value ? "#092B43" : "#F5EDD6",
                   color: selectedFilter === filter.value ? "#faf9f6" : "#092B43",
-                  border: "1px solid #e0d7c8",
+                  border: "1px solid #ede5d8",
                   fontSize: "14px",
                 }}
               >
@@ -104,14 +104,18 @@ export default function ScholarsPage() {
 
           {/* College Logos Grid */}
           <div className="mb-12">
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4 mb-8">
+            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 md:gap-5 mb-8">
               {filteredColleges.map((college) => (
                 <div
                   key={college.id}
-                  className="flex items-center justify-center p-2 transition-opacity hover:opacity-80"
-                  style={{ backgroundColor: "#F6EFDF" }}
+                  className="flex items-center justify-center p-3 rounded transition-all hover:shadow-sm"
+                  style={{
+                    backgroundColor: "#F5EDD6",
+                    border: "1px solid #ede5d8",
+                    aspectRatio: "1",
+                  }}
                 >
-                  <div className="relative w-12 h-12">
+                  <div className="relative w-16 h-16">
                     <Image
                       src={college.logo || "/placeholder.svg"}
                       alt={college.name}
