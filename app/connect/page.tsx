@@ -1,10 +1,25 @@
 "use client"
 
-import React from "react"
+import React, { useEffect } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export default function ConnectPage() {
+  useEffect(() => {
+    // Load ConvertKit script
+    const script = document.createElement("script")
+    script.src = "https://kit.com/forms/8978292/subscriptions"
+    script.async = true
+    script.charset = "utf-8"
+    document.body.appendChild(script)
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script)
+      }
+    }
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#F6EFDF" }}>
       <Header />
@@ -98,20 +113,31 @@ export default function ConnectPage() {
             <h2 className="font-sans font-bold text-base mb-6 uppercase tracking-widest">
               Stay informed about our work
             </h2>
-            <form className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-4">
-              <input
-                type="email"
-                placeholder="Email"
-                className="font-serif text-sm px-4 py-3 bg-white text-mmeri-navy focus:outline-none min-w-[200px]"
-              />
-              <button
-                type="submit"
-                className="font-sans font-bold text-mmeri-navy bg-mmeri-gold hover:bg-mmeri-gold/90 px-6 py-3 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p className="font-serif text-xs text-white/80">
+            {/* ConvertKit Embed Form */}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <form id="ck_form_8978292" class="ck-form" action="https://app.kit.com/forms/8978292/subscriptions" data-remote="true" method="post" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1); background-color: #1a2e4c; border-radius: 0px; padding: 20px 0;">
+                    <div class="ck-form-content" style="color: #fff; max-width: 100%; margin: 0 auto;">
+                      <div style="text-align: center; margin-bottom: 15px;">
+                        <input class="ck-input" name="first_name" placeholder="First Name" type="text" style="width: 90%; max-width: 300px; padding: 8px 12px; margin-bottom: 10px; border: none; border-radius: 4px; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 14px;" />
+                      </div>
+                      <div style="text-align: center; margin-bottom: 15px;">
+                        <input class="ck-input" name="email_address" placeholder="Email Address" type="email" required style="width: 90%; max-width: 300px; padding: 8px 12px; margin-bottom: 10px; border: none; border-radius: 4px; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 14px;" />
+                      </div>
+                      <button class="ck-button ck-button-primary" type="submit" style="color: #1a2e4c; background-color: #d4a84b; border-radius: 4px; padding: 10px 20px; font-weight: bold; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 14px; border: none; cursor: pointer;">Subscribe</button>
+                    </div>
+                    <div class="ck-guaranty" style="font-size: 12px; text-align: center; color: rgba(255,255,255,0.7); margin-top: 15px;">
+                      Thanks for subscribing. Please check your email to confirm your subscription. Once confirmed, you'll receive MMERI updates and key college planning guidance.
+                    </div>
+                  </form>
+                  <script>
+                    (function(w){if(w.ConvertKit){w.setTimeout(function(){w.ConvertKit.attachCircleWidget({element:"ck_form_8978292",className:"ck-circle"})},50)}})(window);
+                  </script>
+                `,
+              }}
+            />
+            <p className="font-serif text-xs text-white/80 mt-4">
               Your information is confidential and protected by us. Consulting with you with MMERI Scholars
             </p>
           </div>
