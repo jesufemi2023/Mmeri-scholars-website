@@ -82,7 +82,7 @@ export default function ScholarsPage() {
           {/* Filter Buttons */}
           <div
             className="flex flex-wrap justify-center gap-2 mb-12 p-4 rounded-lg"
-            style={{ backgroundColor: "#faf9f6" }}
+            style={{ backgroundColor: "#F6EFDF" }}
           >
             {filters.map((filter) => (
               <button
@@ -93,7 +93,7 @@ export default function ScholarsPage() {
                   backgroundColor:
                     selectedFilter === filter.value ? "#092B43" : "transparent",
                   color: selectedFilter === filter.value ? "#faf9f6" : "#092B43",
-                  border: "none",
+                  border: "1px solid #e0d7c8",
                   fontSize: "14px",
                 }}
               >
@@ -104,13 +104,14 @@ export default function ScholarsPage() {
 
           {/* College Logos Grid */}
           <div className="mb-12">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-8">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4 mb-8">
               {filteredColleges.map((college) => (
                 <div
                   key={college.id}
-                  className="flex items-center justify-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow aspect-square"
+                  className="flex items-center justify-center p-2 transition-opacity hover:opacity-80"
+                  style={{ backgroundColor: "#F6EFDF" }}
                 >
-                  <div className="relative w-20 h-20">
+                  <div className="relative w-12 h-12">
                     <Image
                       src={college.logo || "/placeholder.svg"}
                       alt={college.name}
@@ -128,10 +129,9 @@ export default function ScholarsPage() {
             <div className="text-center">
               <a
                 href="#"
-                className="font-serif text-mmeri-navy hover:text-mmeri-maroon transition-colors"
-                style={{ color: "#092B43", fontSize: "14px" }}
+                className="font-serif text-mmeri-navy hover:text-mmeri-maroon transition-colors underline"
               >
-                View all 100+ acceptances
+                View all 200+ acceptances
               </a>
             </div>
           </div>
@@ -142,36 +142,18 @@ export default function ScholarsPage() {
               className="font-serif text-3xl font-bold text-center mb-12"
               style={{
                 color: "#092B43",
+                borderBottom: "2px dotted #d4a84b",
+                paddingBottom: "12px",
               }}
             >
               Featured Scholar Stories
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {scholarStories.map((story, index) => (
+              {scholarStories.map((story) => (
                 <div
                   key={story.id}
-                  className="text-center"
+                  className="bg-white p-8 text-center rounded-lg shadow-sm"
                 >
-                  {/* Top accent line - only on middle card */}
-                  {index === 1 && (
-                    <div
-                      className="h-1 mb-6 mx-auto"
-                      style={{
-                        width: "60px",
-                        backgroundColor: "#d4a84b",
-                        borderTop: "3px solid #d4a84b",
-                      }}
-                    />
-                  )}
-                  {index !== 1 && (
-                    <div
-                      className="h-1 mb-6 mx-auto"
-                      style={{
-                        width: "60px",
-                        borderTop: "2px solid #092B43",
-                      }}
-                    />
-                  )}
                   <div className="relative w-24 h-24 mx-auto mb-6">
                     <Image
                       src={story.image || "/placeholder.svg"}
@@ -200,7 +182,7 @@ export default function ScholarsPage() {
                     className="font-serif text-sm"
                     style={{ color: "#092B43" }}
                   >
-                    {story.description}
+                    "{story.description}"
                   </p>
                 </div>
               ))}
