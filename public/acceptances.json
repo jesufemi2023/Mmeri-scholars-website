@@ -53,6 +53,66 @@
       "name": "Harvey Mudd College",
       "logo": "/college-logos/harvey-mudd.png",
       "category": ["selective", "stem"]
+    },
+    {
+      "id": "unc",
+      "name": "University of North Carolina",
+      "logo": "/college-logos/unc.png",
+      "category": ["selective", "flagship"]
+    },
+    {
+      "id": "swarthmore",
+      "name": "Swarthmore College",
+      "logo": "/college-logos/swarthmore.png",
+      "category": ["selective", "liberal-arts"]
+    },
+    {
+      "id": "virginia",
+      "name": "University of Virginia",
+      "logo": "/college-logos/virginia.png",
+      "category": ["selective", "flagship"]
+    },
+    {
+      "id": "tulane",
+      "name": "Tulane University",
+      "logo": "/college-logos/tulane.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "miami",
+      "name": "University of Miami",
+      "logo": "/college-logos/miami.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "penn",
+      "name": "University of Pennsylvania",
+      "logo": "/college-logos/penn.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "hopkins",
+      "name": "Johns Hopkins University",
+      "logo": "/college-logos/hopkins.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "northeastern",
+      "name": "Northeastern University",
+      "logo": "/college-logos/northeastern.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "pvamu",
+      "name": "Prairie View A&M University",
+      "logo": "/college-logos/pvamu.png",
+      "category": ["hbcu", "stem"]
+    },
+    {
+      "id": "michigan",
+      "name": "University of Michigan",
+      "logo": "/college-logos/michigan.png",
+      "category": ["selective", "flagship", "stem"]
     }
   ],
   "scholarStories": [
