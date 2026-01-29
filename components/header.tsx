@@ -135,8 +135,7 @@ export function Header() {
               FAQ
             </Link>
             <Link
-              href="/#connect"
-              onClick={(e) => handleNavClick(e, "/#connect")}
+              href="/connect"
               className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold text-[15px] whitespace-nowrap"
             >
               Connect
@@ -212,8 +211,8 @@ export function Header() {
               FAQ
             </Link>
             <Link
-              href="/#connect"
-              onClick={(e) => handleNavClick(e, "/#connect")}
+              href="/connect"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="font-sans text-mmeri-navy hover:text-mmeri-maroon transition-colors font-semibold py-2.5 px-3 rounded-lg hover:bg-mmeri-navy/5"
             >
               Connect
