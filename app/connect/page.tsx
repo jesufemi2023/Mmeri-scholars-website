@@ -135,9 +135,6 @@ export default function ConnectPage() {
             <p className="font-serif text-sm text-white/90 mt-6 text-center">
               Your information is confidential and used solely for connecting you with MMERI Scholars
             </p>
-            <p className="font-serif text-sm text-white/90 mt-2 text-center">
-              Phone: <a href="tel:346-456-4980" className="hover:text-white transition-colors">346 456 4980</a>
-            </p>
           </div>
         </div>
       </main>
