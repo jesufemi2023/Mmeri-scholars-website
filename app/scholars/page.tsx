@@ -84,139 +84,149 @@ export default function ScholarsPage() {
       <Header />
       <main className="flex-1 pt-16 md:pt-20 pb-8 md:pb-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          {/* Header Section */}
-          <div className="text-center mb-12">
-            <h2
-              className="font-serif text-4xl md:text-5xl font-bold mb-2"
-              style={{ color: "#092B43" }}
-            >
-              Proof of What's Possible
-            </h2>
-            <p
-              className="font-serif text-lg"
-              style={{ color: "#092B43" }}
-            >
-              Our Scholars Earn Admissions to Top Institutions
-            </p>
-          </div>
+          {/* Proof of What's Possible Card */}
+          <div
+            className="rounded-lg p-8 md:p-12 mb-16"
+            style={{
+              backgroundColor: "#FFFFFF",
+              border: "1px solid #D6D9DC",
+              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+            }}
+          >
+            {/* Header Section */}
+            <div className="text-center mb-12">
+              <h2
+                className="font-serif text-4xl md:text-5xl font-bold mb-2"
+                style={{ color: "#092B43" }}
+              >
+                Proof of What's Possible
+              </h2>
+              <p
+                className="font-serif text-lg"
+                style={{ color: "#092B43" }}
+              >
+                Our Scholars Earn Admissions to Top Institutions
+              </p>
+            </div>
 
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12 px-4">
-            {filters.map((filter) => (
-              <button
-                key={filter.value}
-                onClick={() => setSelectedFilter(filter.value)}
-                className="font-serif font-semibold px-5 py-2 rounded-lg transition-all"
+            {/* Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-3 mb-12 px-4">
+              {filters.map((filter) => (
+                <button
+                  key={filter.value}
+                  onClick={() => setSelectedFilter(filter.value)}
+                  className="font-serif font-semibold px-5 py-2 rounded-lg transition-all"
+                  style={{
+                    backgroundColor:
+                      selectedFilter === filter.value ? "#092B43" : "#F0E5D5",
+                    color: selectedFilter === filter.value ? "#faf9f6" : "#092B43",
+                    border:
+                      selectedFilter === filter.value
+                        ? "1px solid #092B43"
+                        : "1px solid #D6D9DC",
+                    fontSize: "14px",
+                  }}
+                >
+                  {filter.label}
+                </button>
+              ))}
+            </div>
+
+            {/* College Logos Grid */}
+            <div className="mb-12">
+              <div className="grid grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-3 md:gap-4 mb-8">
+                {filteredColleges.map((college) => (
+                  <div
+                    key={college.id}
+                    className="flex items-center justify-center p-2 rounded-lg transition-all hover:shadow-sm"
+                    style={{
+                      backgroundColor: "#F0E5D5",
+                      border: "1px solid #D6D9DC",
+                      aspectRatio: "1",
+                      boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+                    }}
+                  >
+                    <div className="relative w-14 h-14">
+                      <Image
+                        src={college.logo || "/placeholder.svg"}
+                        alt={college.name}
+                        fill
+                        className="object-contain"
+                        onError={(e) => {
+                          const img = e.target as HTMLImageElement
+                          img.src = "/placeholder-logo.svg"
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center">
+                <a
+                  href="#"
+                  className="font-serif text-mmeri-navy hover:text-mmeri-maroon transition-colors underline"
+                >
+                  View all 200+ acceptances
+                </a>
+              </div>
+            </div>
+
+            {/* Featured Scholar Stories */}
+            <div className="mt-12">
+              <h3
+                className="font-serif text-3xl font-bold text-center mb-12"
                 style={{
-                  backgroundColor:
-                    selectedFilter === filter.value ? "#092B43" : "#FFFFFF",
-                  color: selectedFilter === filter.value ? "#faf9f6" : "#092B43",
-                  border:
-                    selectedFilter === filter.value
-                      ? "1px solid #092B43"
-                      : "1px solid #D6D9DC",
-                  fontSize: "14px",
+                  color: "#092B43",
+                  borderBottom: "2px dotted #d4a84b",
+                  paddingBottom: "12px",
                 }}
               >
-                {filter.label}
-              </button>
-            ))}
-          </div>
-
-          {/* College Logos Grid */}
-          <div className="mb-12">
-            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 md:gap-5 mb-8">
-              {filteredColleges.map((college) => (
-                <div
-                  key={college.id}
-                  className="flex items-center justify-center p-3 rounded-lg transition-all hover:shadow-sm"
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    border: "1px solid #D6D9DC",
-                    aspectRatio: "1",
-                    boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
-                  }}
-                >
-                  <div className="relative w-16 h-16">
-                    <Image
-                      src={college.logo || "/placeholder.svg"}
-                      alt={college.name}
-                      fill
-                      className="object-contain"
-                      onError={(e) => {
-                        const img = e.target as HTMLImageElement
-                        img.src = "/placeholder-logo.svg"
-                      }}
-                    />
+                Featured Scholar Stories
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {scholarStories.map((story) => (
+                  <div
+                    key={story.id}
+                    className="p-8 text-center rounded-lg transition-all"
+                    style={{
+                      backgroundColor: "#F0E5D5",
+                      border: "1px solid #D6D9DC",
+                      boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+                    }}
+                  >
+                    <div className="relative w-24 h-24 mx-auto mb-6">
+                      <Image
+                        src={story.image || "/placeholder.svg"}
+                        alt={story.name}
+                        fill
+                        className="object-cover rounded-full"
+                        onError={(e) => {
+                          const img = e.target as HTMLImageElement
+                          img.src = "/placeholder-user.jpg"
+                        }}
+                      />
+                    </div>
+                    <h4
+                      className="font-serif font-bold text-lg mb-1"
+                      style={{ color: "#092B43" }}
+                    >
+                      {story.name}
+                    </h4>
+                    <p
+                      className="font-serif text-sm mb-4"
+                      style={{ color: "#6b8e7f" }}
+                    >
+                      {story.school}
+                    </p>
+                    <p
+                      className="font-serif text-sm"
+                      style={{ color: "#092B43" }}
+                    >
+                      "{story.description}"
+                    </p>
                   </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center">
-              <a
-                href="#"
-                className="font-serif text-mmeri-navy hover:text-mmeri-maroon transition-colors underline"
-              >
-                View all 200+ acceptances
-              </a>
-            </div>
-          </div>
-
-          {/* Featured Scholar Stories */}
-          <div className="mt-16">
-            <h3
-              className="font-serif text-3xl font-bold text-center mb-12"
-              style={{
-                color: "#092B43",
-                borderBottom: "2px dotted #d4a84b",
-                paddingBottom: "12px",
-              }}
-            >
-              Featured Scholar Stories
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {scholarStories.map((story) => (
-                <div
-                  key={story.id}
-                  className="p-8 text-center rounded-lg transition-all"
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    border: "1px solid #D6D9DC",
-                    boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
-                  }}
-                >
-                  <div className="relative w-24 h-24 mx-auto mb-6">
-                    <Image
-                      src={story.image || "/placeholder.svg"}
-                      alt={story.name}
-                      fill
-                      className="object-cover rounded-full"
-                      onError={(e) => {
-                        const img = e.target as HTMLImageElement
-                        img.src = "/placeholder-user.jpg"
-                      }}
-                    />
-                  </div>
-                  <h4
-                    className="font-serif font-bold text-lg mb-1"
-                    style={{ color: "#092B43" }}
-                  >
-                    {story.name}
-                  </h4>
-                  <p
-                    className="font-serif text-sm mb-4"
-                    style={{ color: "#6b8e7f" }}
-                  >
-                    {story.school}
-                  </p>
-                  <p
-                    className="font-serif text-sm"
-                    style={{ color: "#092B43" }}
-                  >
-                    "{story.description}"
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
