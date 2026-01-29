@@ -101,20 +101,20 @@ export default function ScholarsPage() {
           </div>
 
           {/* Filter Buttons */}
-          <div
-            className="flex flex-wrap justify-center gap-2 mb-12 p-6 rounded-lg"
-            style={{ backgroundColor: "#F6EFDF" }}
-          >
+          <div className="flex flex-wrap justify-center gap-3 mb-12 px-4">
             {filters.map((filter) => (
               <button
                 key={filter.value}
                 onClick={() => setSelectedFilter(filter.value)}
-                className="font-serif font-semibold px-5 py-2 rounded-full transition-all"
+                className="font-serif font-semibold px-5 py-2 rounded-lg transition-all"
                 style={{
                   backgroundColor:
-                    selectedFilter === filter.value ? "#092B43" : "#F5EDD6",
+                    selectedFilter === filter.value ? "#092B43" : "#FFFFFF",
                   color: selectedFilter === filter.value ? "#faf9f6" : "#092B43",
-                  border: "1px solid #ede5d8",
+                  border:
+                    selectedFilter === filter.value
+                      ? "1px solid #092B43"
+                      : "1px solid #D6D9DC",
                   fontSize: "14px",
                 }}
               >
@@ -129,11 +129,12 @@ export default function ScholarsPage() {
               {filteredColleges.map((college) => (
                 <div
                   key={college.id}
-                  className="flex items-center justify-center p-3 rounded transition-all hover:shadow-sm"
+                  className="flex items-center justify-center p-3 rounded-lg transition-all hover:shadow-sm"
                   style={{
-                    backgroundColor: "#F5EDD6",
-                    border: "1px solid #ede5d8",
+                    backgroundColor: "#FFFFFF",
+                    border: "1px solid #D6D9DC",
                     aspectRatio: "1",
+                    boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
                   }}
                 >
                   <div className="relative w-16 h-16">
@@ -177,7 +178,12 @@ export default function ScholarsPage() {
               {scholarStories.map((story) => (
                 <div
                   key={story.id}
-                  className="bg-white p-8 text-center rounded-lg shadow-sm"
+                  className="p-8 text-center rounded-lg transition-all"
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    border: "1px solid #D6D9DC",
+                    boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+                  }}
                 >
                   <div className="relative w-24 h-24 mx-auto mb-6">
                     <Image
