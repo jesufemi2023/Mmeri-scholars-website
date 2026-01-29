@@ -1,52 +1,34 @@
 {
   "colleges": [
     {
-      "id": "harvard",
-      "name": "Harvard University",
-      "logo": "/college-logos/harvard.png",
+      "id": "bates",
+      "name": "Bates College",
+      "logo": "/college-logos/bates.png",
       "category": ["selective", "liberal-arts"]
     },
     {
-      "id": "princeton",
-      "name": "Princeton University",
-      "logo": "/college-logos/princeton.png",
+      "id": "columbia",
+      "name": "Columbia University",
+      "logo": "/college-logos/columbia.png",
       "category": ["selective", "liberal-arts"]
     },
     {
-      "id": "marquette",
-      "name": "Marquette University",
-      "logo": "/college-logos/marquette.png",
-      "category": ["selective"]
-    },
-    {
-      "id": "notre-dame",
-      "name": "University of Notre Dame",
-      "logo": "/college-logos/notre-dame.png",
-      "category": ["selective", "liberal-arts"]
-    },
-    {
-      "id": "cornell",
-      "name": "Cornell University",
-      "logo": "/college-logos/cornell.png",
+      "id": "duke",
+      "name": "Duke University",
+      "logo": "/college-logos/duke.png",
       "category": ["selective", "stem"]
     },
     {
-      "id": "mit",
-      "name": "Massachusetts Institute of Technology",
-      "logo": "/college-logos/mit.png",
-      "category": ["selective", "stem"]
-    },
-    {
-      "id": "uc-berkeley",
-      "name": "University of California, Berkeley",
-      "logo": "/college-logos/uc-berkeley.png",
-      "category": ["flagship", "stem"]
-    },
-    {
-      "id": "yale",
-      "name": "Yale University",
-      "logo": "/college-logos/yale.png",
+      "id": "bryn-mawr",
+      "name": "Bryn Mawr College",
+      "logo": "/college-logos/bryn-mawr.png",
       "category": ["selective", "liberal-arts"]
+    },
+    {
+      "id": "lehigh",
+      "name": "Lehigh University",
+      "logo": "/college-logos/lehigh.png",
+      "category": ["selective", "stem"]
     },
     {
       "id": "howard",
@@ -61,10 +43,16 @@
       "category": ["hbcu", "liberal-arts"]
     },
     {
-      "id": "morehouse",
-      "name": "Morehouse College",
-      "logo": "/college-logos/morehouse.png",
-      "category": ["hbcu", "liberal-arts"]
+      "id": "babson",
+      "name": "Babson College",
+      "logo": "/college-logos/babson.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "harvey-mudd",
+      "name": "Harvey Mudd College",
+      "logo": "/college-logos/harvey-mudd.png",
+      "category": ["selective", "stem"]
     }
   ],
   "scholarStories": [
