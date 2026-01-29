@@ -4,13 +4,13 @@
       "id": "harvard",
       "name": "Harvard University",
       "logo": "/college-logos/harvard.png",
-      "category": ["selective", "ivies"]
+      "category": ["selective", "liberal-arts"]
     },
     {
       "id": "princeton",
       "name": "Princeton University",
       "logo": "/college-logos/princeton.png",
-      "category": ["selective", "ivies"]
+      "category": ["selective", "liberal-arts"]
     },
     {
       "id": "marquette",
@@ -22,13 +22,13 @@
       "id": "notre-dame",
       "name": "University of Notre Dame",
       "logo": "/college-logos/notre-dame.png",
-      "category": ["selective", "ivies"]
+      "category": ["selective", "liberal-arts"]
     },
     {
       "id": "cornell",
       "name": "Cornell University",
       "logo": "/college-logos/cornell.png",
-      "category": ["selective", "ivies"]
+      "category": ["selective", "stem"]
     },
     {
       "id": "mit",
@@ -46,7 +46,25 @@
       "id": "yale",
       "name": "Yale University",
       "logo": "/college-logos/yale.png",
-      "category": ["selective", "ivies"]
+      "category": ["selective", "liberal-arts"]
+    },
+    {
+      "id": "howard",
+      "name": "Howard University",
+      "logo": "/college-logos/howard.png",
+      "category": ["hbcu", "selective"]
+    },
+    {
+      "id": "spelman",
+      "name": "Spelman College",
+      "logo": "/college-logos/spelman.png",
+      "category": ["hbcu", "liberal-arts"]
+    },
+    {
+      "id": "morehouse",
+      "name": "Morehouse College",
+      "logo": "/college-logos/morehouse.png",
+      "category": ["hbcu", "liberal-arts"]
     }
   ],
   "scholarStories": [

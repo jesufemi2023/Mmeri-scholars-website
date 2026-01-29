@@ -51,9 +51,10 @@ export default function ScholarsPage() {
 
   const filters = [
     { label: "All", value: "all" },
-    { label: "Selective", value: "selective" },
-    { label: "IVIES", value: "ivies" },
-    { label: "State Schools", value: "state" },
+    { label: "Selectives", value: "selective" },
+    { label: "HBCU", value: "hbcu" },
+    { label: "STEM", value: "stem" },
+    { label: "Liberal Arts", value: "liberal-arts" },
     { label: "Flagship", value: "flagship" },
   ]
 
@@ -79,17 +80,21 @@ export default function ScholarsPage() {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div
+            className="flex flex-wrap justify-center gap-2 mb-12 p-4 rounded-lg"
+            style={{ backgroundColor: "#faf9f6" }}
+          >
             {filters.map((filter) => (
               <button
                 key={filter.value}
                 onClick={() => setSelectedFilter(filter.value)}
-                className="font-sans font-semibold px-4 py-2 rounded transition-all"
+                className="font-serif font-semibold px-5 py-2 rounded-full transition-all"
                 style={{
                   backgroundColor:
                     selectedFilter === filter.value ? "#092B43" : "transparent",
                   color: selectedFilter === filter.value ? "#faf9f6" : "#092B43",
-                  border: "2px solid #092B43",
+                  border: "none",
+                  fontSize: "14px",
                 }}
               >
                 {filter.label}
