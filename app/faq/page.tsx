@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ChevronDown } from "lucide-react"
@@ -167,12 +166,9 @@ export default function FAQPage() {
             <p className="font-serif text-sm md:text-base mb-6 text-white/90">
               We'll help you identify the right next step based your student's stage and needs
             </p>
-            <Link
-              href="/connect"
-              className="inline-block font-sans font-bold text-white bg-mmeri-maroon hover:bg-mmeri-maroon/90 px-8 py-3 rounded-md transition-colors mb-4"
-            >
+            <button className="inline-block font-sans font-bold text-white bg-mmeri-maroon hover:bg-mmeri-maroon/90 px-8 py-3 rounded-md transition-colors mb-4">
               Schedule a Free Consultation
-            </Link>
+            </button>
           </div>
         </div>
       </main>
