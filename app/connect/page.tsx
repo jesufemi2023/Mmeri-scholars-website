@@ -93,7 +93,12 @@ export default function ConnectPage() {
               />
               <button
                 type="submit"
-                className="font-sans font-bold text-white bg-mmeri-navy hover:bg-mmeri-navy/90 px-6 py-3 transition-colors"
+                className="font-sans font-bold px-6 py-3 transition-colors"
+                style={{
+                  backgroundColor: "#faf9f6",
+                  color: "#092B43",
+                  border: "2px solid #092B43",
+                }}
               >
                 Submit
               </button>
