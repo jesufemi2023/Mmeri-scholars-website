@@ -104,13 +104,13 @@ export default function ScholarsPage() {
 
           {/* College Logos Grid */}
           <div className="mb-12">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-8">
               {filteredColleges.map((college) => (
                 <div
                   key={college.id}
-                  className="flex items-center justify-center bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  className="flex items-center justify-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow aspect-square"
                 >
-                  <div className="relative w-24 h-24">
+                  <div className="relative w-20 h-20">
                     <Image
                       src={college.logo || "/placeholder.svg"}
                       alt={college.name}
@@ -128,9 +128,10 @@ export default function ScholarsPage() {
             <div className="text-center">
               <a
                 href="#"
-                className="font-serif text-mmeri-navy hover:text-mmeri-maroon transition-colors underline"
+                className="font-serif text-mmeri-navy hover:text-mmeri-maroon transition-colors"
+                style={{ color: "#092B43", fontSize: "14px" }}
               >
-                View all 200+ acceptances
+                View all 100+ acceptances
               </a>
             </div>
           </div>
@@ -141,18 +142,36 @@ export default function ScholarsPage() {
               className="font-serif text-3xl font-bold text-center mb-12"
               style={{
                 color: "#092B43",
-                borderBottom: "2px dotted #d4a84b",
-                paddingBottom: "12px",
               }}
             >
               Featured Scholar Stories
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {scholarStories.map((story) => (
+              {scholarStories.map((story, index) => (
                 <div
                   key={story.id}
-                  className="bg-white p-8 text-center rounded-lg shadow-sm"
+                  className="text-center"
                 >
+                  {/* Top accent line - only on middle card */}
+                  {index === 1 && (
+                    <div
+                      className="h-1 mb-6 mx-auto"
+                      style={{
+                        width: "60px",
+                        backgroundColor: "#d4a84b",
+                        borderTop: "3px solid #d4a84b",
+                      }}
+                    />
+                  )}
+                  {index !== 1 && (
+                    <div
+                      className="h-1 mb-6 mx-auto"
+                      style={{
+                        width: "60px",
+                        borderTop: "2px solid #092B43",
+                      }}
+                    />
+                  )}
                   <div className="relative w-24 h-24 mx-auto mb-6">
                     <Image
                       src={story.image || "/placeholder.svg"}
@@ -181,7 +200,7 @@ export default function ScholarsPage() {
                     className="font-serif text-sm"
                     style={{ color: "#092B43" }}
                   >
-                    "{story.description}"
+                    {story.description}
                   </p>
                 </div>
               ))}
