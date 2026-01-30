@@ -19,12 +19,6 @@
       "category": ["selective", "stem"]
     },
     {
-      "id": "howard",
-      "name": "Howard University",
-      "logo": "/college-logos/howard.png",
-      "category": ["hbcu", "selective"]
-    },
-    {
       "id": "babson",
       "name": "Babson College",
       "logo": "/college-logos/babson.png",
