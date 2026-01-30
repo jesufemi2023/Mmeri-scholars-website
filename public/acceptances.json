@@ -101,6 +101,48 @@
       "name": "Vanderbilt University",
       "logo": "/college-logos/vanderbilt.png",
       "category": ["selective", "stem"]
+    },
+    {
+      "id": "wake-forest",
+      "name": "Wake Forest University",
+      "logo": "/college-logos/wake-forest.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "colorado-college",
+      "name": "Colorado College",
+      "logo": "/college-logos/colorado-college.png",
+      "category": ["selective", "liberal-arts"]
+    },
+    {
+      "id": "wesleyan",
+      "name": "Wesleyan University",
+      "logo": "/college-logos/wesleyan.png",
+      "category": ["selective", "liberal-arts"]
+    },
+    {
+      "id": "virginia",
+      "name": "University of Virginia",
+      "logo": "/college-logos/virginia.png",
+      "category": ["selective", "flagship"]
+    },
+    {
+      "id": "unc",
+      "name": "University of North Carolina at Chapel Hill",
+      "logo": "/college-logos/unc.png",
+      "category": ["selective", "flagship"]
+    },
+    {
+      "id": "columbia",
+      "name": "Columbia University",
+      "logo": "/college-logos/columbia.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "penn",
+      "name": "University of Pennsylvania",
+      "logo": "/college-logos/penn.png",
+      "category": ["selective", "stem"]
     }
   ],
   "scholarStories": [
