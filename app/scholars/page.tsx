@@ -166,7 +166,7 @@ export default function ScholarsPage() {
                   href="#"
                   className="font-serif text-mmeri-navy hover:text-mmeri-maroon transition-colors underline"
                 >
-                  View all 24 acceptances
+                  View all 20 acceptances
                 </a>
               </div>
             </div>

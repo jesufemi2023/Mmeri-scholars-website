@@ -85,27 +85,9 @@
       "category": ["selective", "stem"]
     },
     {
-      "id": "hopkins",
-      "name": "Johns Hopkins University",
-      "logo": "/college-logos/hopkins.png",
-      "category": ["selective", "stem"]
-    },
-    {
       "id": "tulane",
       "name": "Tulane University",
       "logo": "/college-logos/tulane.png",
-      "category": ["selective"]
-    },
-    {
-      "id": "vanderbilt",
-      "name": "Vanderbilt University",
-      "logo": "/college-logos/vanderbilt.png",
-      "category": ["selective", "stem"]
-    },
-    {
-      "id": "wake-forest",
-      "name": "Wake Forest University",
-      "logo": "/college-logos/wake-forest.png",
       "category": ["selective"]
     },
     {
