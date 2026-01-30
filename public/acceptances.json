@@ -41,6 +41,66 @@
       "name": "Duke University",
       "logo": "/college-logos/duke.png",
       "category": ["selective", "stem"]
+    },
+    {
+      "id": "miami",
+      "name": "University of Miami",
+      "logo": "/college-logos/miami.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "pvamu",
+      "name": "Prairie View A&M University",
+      "logo": "/college-logos/pvamu.png",
+      "category": ["hbcu", "stem"]
+    },
+    {
+      "id": "michigan",
+      "name": "University of Michigan",
+      "logo": "/college-logos/michigan.png",
+      "category": ["selective", "flagship", "stem"]
+    },
+    {
+      "id": "richmond",
+      "name": "University of Richmond",
+      "logo": "/college-logos/richmond.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "swarthmore",
+      "name": "Swarthmore College",
+      "logo": "/college-logos/swarthmore.png",
+      "category": ["selective", "liberal-arts"]
+    },
+    {
+      "id": "northeastern",
+      "name": "Northeastern University",
+      "logo": "/college-logos/northeastern.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "lehigh",
+      "name": "Lehigh University",
+      "logo": "/college-logos/lehigh.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "hopkins",
+      "name": "Johns Hopkins University",
+      "logo": "/college-logos/hopkins.png",
+      "category": ["selective", "stem"]
+    },
+    {
+      "id": "tulane",
+      "name": "Tulane University",
+      "logo": "/college-logos/tulane.png",
+      "category": ["selective"]
+    },
+    {
+      "id": "vanderbilt",
+      "name": "Vanderbilt University",
+      "logo": "/college-logos/vanderbilt.png",
+      "category": ["selective", "stem"]
     }
   ],
   "scholarStories": [
