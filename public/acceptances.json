@@ -127,12 +127,6 @@
       "category": ["selective", "flagship"]
     },
     {
-      "id": "unc",
-      "name": "University of North Carolina at Chapel Hill",
-      "logo": "/college-logos/unc.png",
-      "category": ["selective", "flagship"]
-    },
-    {
       "id": "columbia",
       "name": "Columbia University",
       "logo": "/college-logos/columbia.png",
