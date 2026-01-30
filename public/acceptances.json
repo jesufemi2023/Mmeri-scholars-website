@@ -97,12 +97,6 @@
       "category": ["selective", "liberal-arts"]
     },
     {
-      "id": "virginia",
-      "name": "University of Virginia",
-      "logo": "/college-logos/virginia.png",
-      "category": ["selective", "flagship"]
-    },
-    {
       "id": "columbia",
       "name": "Columbia University",
       "logo": "/college-logos/columbia.png",
