@@ -132,44 +132,7 @@ export default function ScholarsPage() {
               ))}
             </div>
 
-            {/* College Logos Grid */}
-            <div className="mb-12">
-              <div className="grid grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-3 md:gap-4 mb-8">
-                {filteredColleges.map((college) => (
-                  <div
-                    key={college.id}
-                    className="flex items-center justify-center p-2 rounded-lg transition-all hover:shadow-sm"
-                    style={{
-                      backgroundColor: "#F0E5D5",
-                      border: "1px solid #D6D9DC",
-                      aspectRatio: "1",
-                      boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
-                    }}
-                  >
-                    <div className="relative w-14 h-14">
-                      <Image
-                        src={college.logo || "/placeholder.svg"}
-                        alt={college.name}
-                        fill
-                        className="object-contain"
-                        onError={(e) => {
-                          const img = e.target as HTMLImageElement
-                          img.src = "/placeholder-logo.svg"
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="text-center">
-                <a
-                  href="#"
-                  className="font-serif text-mmeri-navy hover:text-mmeri-maroon transition-colors underline"
-                >
-                  View all 200+ acceptances
-                </a>
-              </div>
-            </div>
+
 
             {/* Featured Scholar Stories */}
             <div className="mt-12">
